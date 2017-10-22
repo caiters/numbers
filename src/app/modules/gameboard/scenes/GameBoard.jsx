@@ -5,9 +5,15 @@ import { connect } from "react-redux";
 const mapStateToProps = state => state.gameBoard;
 const mapDispatchToProps = dispatch => ({});
 
-const GameBoard = () =>
-  <section className="gameboard">
-    <Number />
-  </section>;
+const GameBoard = ({ numbers, encoded }) => {
+  let rows = numbers.map(function(number) {
+    return <Number number={number} />;
+  });
+  return (
+    <section className="gameboard" data-encoded={encoded}>
+      {rows}
+    </section>
+  );
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(GameBoard);
