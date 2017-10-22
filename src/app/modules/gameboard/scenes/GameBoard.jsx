@@ -7,7 +7,7 @@ const mapDispatchToProps = dispatch => ({});
 
 const GameBoard = ({ numbers, encoded }) => {
   let rows = numbers.map(function(number, index) {
-    return <Number number={number} index={index} />;
+    return <Number index={index} />;
   });
   return (
     <section className="gameboard" data-encoded={encoded}>
