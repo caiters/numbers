@@ -20,6 +20,12 @@ const create = () => {
   };
 };
 
+const initNada = () => {
+  return {
+
+  };
+};
+
 const selectNumber = (index, gameBoard) => {
   let lastSelected = gameBoard.lastSelected;
 
