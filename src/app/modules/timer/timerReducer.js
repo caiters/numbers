@@ -1,17 +1,15 @@
-import { NEW_GAME, SELECT_NUMBER } from "./gameBoardActions";
+import { START_TIMER, STOP_TIMER, RESET_TIMER } from "./timerActions";
 import { create, selectNumber } from "./gameBoard";
 
-export default (gameBoard = create(), action) => {
+export default (timer = {}, action) => {
   switch (action.type) {
-    case NEW_GAME:
-      return Object.assign({}, gameBoard, create());
-    case SELECT_NUMBER:
-      return Object.assign(
-        {},
-        gameBoard,
-        selectNumber(action.index, gameBoard)
-      );
+    case START_TIMER:
+      return Object.assign({}, timer, start());
+    case STOP_TIMER:
+      return Object.assign({}, timer, stop());
+    case RESET_TIMER:
+        return Object.assign({}, timer, reset());
     default:
-      return gameBoard;
+      return timer;
   }
 };
