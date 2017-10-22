@@ -25,6 +25,7 @@ class GameBoard extends Component {
     let rows = numbers.map((number, index) => {
       return (
         <Number
+          key={index}
           onClick={() => {
             this.onClick(number.number, index);
           }}
