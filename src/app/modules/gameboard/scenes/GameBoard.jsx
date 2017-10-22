@@ -3,6 +3,7 @@ import { Component } from "react";
 import Number from "./Number";
 import { connect } from "react-redux";
 import { selectNumber } from "../gameBoardActions";
+import "./GameBoard.scss";
 
 const mapStateToProps = state => state.gameBoard;
 const mapDispatchToProps = {
@@ -12,11 +13,8 @@ const mapDispatchToProps = {
 class GameBoard extends Component {
   onClick(number, index) {
     let { lastSelected } = this.props;
-    console.log({ number, lastSelected }, "outside");
     if (number === lastSelected + 1) {
       this.props.selectNumber(index);
-    } else {
-      console.log({ number, lastSelected });
     }
   }
   render() {

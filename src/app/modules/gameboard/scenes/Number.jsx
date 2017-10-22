@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { selectNumber } from "../gameBoardActions";
+import "./Number.scss";
 const mapStateToProps = (state, props) => state.gameBoard.numbers[props.index];
 
 const Number = props => {
