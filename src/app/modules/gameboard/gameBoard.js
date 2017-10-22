@@ -41,10 +41,19 @@ const selectNumber = (index, gameBoard) => {
     return Object.assign({}, n);
   });
 
+  const isEndGame = (elem, index, array) => elem.selected;
+  if (numbers.every(isEndGame)) {
+    endGame();
+  }
+
   return Object.assign({}, gameBoard, {
     lastSelected,
     numbers
   });
+};
+
+const endGame = (gameboard) => {
+   // Do cool end game stuff
 };
 
 export { create, selectNumber };
