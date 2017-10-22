@@ -8,7 +8,7 @@ const create = () => {
   );
   const numbers = shuffled.map(n => ({
     number: n,
-    selected: false
+    selected: null
   }));
 
   const encoded = Buffer.from(shuffled).toString("base64");
