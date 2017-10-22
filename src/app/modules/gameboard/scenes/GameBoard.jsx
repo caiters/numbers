@@ -4,13 +4,12 @@ import Number from "./Number";
 import { connect } from "react-redux";
 import "./GameBoard.scss";
 import LastClicked from "./LastClicked";
-import  NewGame  from "./NewGame";
 
-import { selectNumber, newGame } from "../gameBoardActions";;
+import { selectNumber } from "../gameBoardActions";;
 
 const mapStateToProps = state => state.gameBoard;
 const mapDispatchToProps = {
-  selectNumber, newGame
+  selectNumber
 };
 
 class GameBoard extends Component {
@@ -21,12 +20,13 @@ class GameBoard extends Component {
     }
   }
 
-  newGame() {
-    this.props.newGame();
-  }
-
   render() {
     let { numbers, encoded } = this.props;
+
+    if (numbers === undefined) {
+      return null;
+    }
+
     let rows = numbers.map((number, index) => {
       return (
         <Number
@@ -44,10 +44,6 @@ class GameBoard extends Component {
         <section className="gameboard" data-encoded={encoded}>
           {rows}
         </section>
-        <NewGame onClick={() => {
-            console.log('here');
-            this.newGame()
-        }} />
       </div>
     );
   }

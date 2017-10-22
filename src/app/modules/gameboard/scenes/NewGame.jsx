@@ -1,10 +1,16 @@
 import React from "react";
+import { connect } from "react-redux";
+import { newGame } from "../gameBoardActions";;
+
+const mapDispatchToProps = {
+  newGame
+};
 
 const NewGame = props => {
   var newGameProps = {
     type: "button",
     className: "newgame",
-    onClick: props.onClick
+    onClick: props.newGame
   };
   return (
     <button {...newGameProps}>
@@ -13,4 +19,4 @@ const NewGame = props => {
   );
 };
 
-export default NewGame
+export default connect(() => ({}), mapDispatchToProps)(NewGame);
