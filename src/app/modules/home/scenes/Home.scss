@@ -5,6 +5,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
   &__logo {
     &-link {
       display: inline-block;
@@ -19,9 +20,9 @@
   }
   &__heading {
     color: #525252;
-    font-family: "Source Sans Pro", sans-serif;
     font-size: 48px;
     font-weight: 200;
+    margin-bottom: 0.5em;
   }
   &__nav {
     margin: 20px 0;
@@ -35,11 +36,10 @@
       &-link {
         font-size: 16px;
         color: #525252;
-        font-family: "Source Sans Pro", sans-serif;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
-          color: #53C1DE;
+          color: #53c1de;
         }
       }
     }

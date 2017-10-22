@@ -14,6 +14,7 @@ class Home extends Component {
       <div className="home">
         <div className="home__content">
           <h1 className="home__heading">Numbers Clicky</h1>
+          <p>How fast can you click 1-10?</p>
         </div>
       </div>
     );
