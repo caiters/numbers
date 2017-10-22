@@ -10,13 +10,14 @@
   font-weight: 200;
   cursor: pointer;
   flex-basis: 20%;
+  transition: all 0.25s;
+  color: #000;
   &:hover {
     background: #ddd;
   }
   &[disabled],
   &:disabled {
-    cursor: not-allowed;
-    background-color: #222;
-    color: #666;
+    color: currentColor;
+    background-color: #fff;
   }
 }
