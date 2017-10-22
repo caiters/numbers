@@ -2,7 +2,6 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { withTranslate } from 'react-redux-multilingual'
 import * as commonActions from '../../common/actions/commonActions'
 import '../../../resources/assets/scss/main.scss'
 
@@ -32,6 +31,4 @@ function mapStateToProps(state) {
 const mapDispatchToProps = dispatch => ({
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  withTranslate(App)
-)
+export default connect(mapStateToProps, mapDispatchToProps)(App)
