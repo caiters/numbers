@@ -8,7 +8,8 @@ const mapStateToProps = (state, props) => ({
 const LastClicked = props => {
   return (
     <p className="last-clicked">
-      Last number clicked: {props.lastSelected}
+      Last number clicked:{" "}
+      <strong className="last-clicked__item">{props.lastSelected}</strong>
     </p>
   );
 };

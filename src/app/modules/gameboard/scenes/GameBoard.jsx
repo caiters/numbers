@@ -4,13 +4,14 @@ import Number from "./Number";
 import { connect } from "react-redux";
 import "./GameBoard.scss";
 import LastClicked from "./LastClicked";
-import  NewGame  from "./NewGame";
+import NewGame from "./NewGame";
 
-import { selectNumber, newGame } from "../gameBoardActions";;
+import { selectNumber, newGame } from "../gameBoardActions";
 
 const mapStateToProps = state => state.gameBoard;
 const mapDispatchToProps = {
-  selectNumber, newGame
+  selectNumber,
+  newGame
 };
 
 class GameBoard extends Component {
@@ -40,14 +41,16 @@ class GameBoard extends Component {
     });
     return (
       <div>
-        <LastClicked />
         <section className="gameboard" data-encoded={encoded}>
           {rows}
         </section>
-        <NewGame onClick={() => {
-            console.log('here');
-            this.newGame()
-        }} />
+        <LastClicked />
+        <NewGame
+          onClick={() => {
+            console.log("here");
+            this.newGame();
+          }}
+        />
       </div>
     );
   }
