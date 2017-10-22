@@ -1,4 +1,4 @@
-import { NEW_GAME, SELECT_NUMBER } from "./gameBoardActions";
+import { NEW_GAME, SELECT_NUMBER, END_GAME } from "./gameBoardActions";
 import { create, selectNumber } from "./gameBoard";
 
 export default (gameBoard = {}, action) => {
@@ -11,6 +11,8 @@ export default (gameBoard = {}, action) => {
         gameBoard,
         selectNumber(action.index, gameBoard)
       );
+    case END_GAME:
+      console.log("end game");
     default:
       return gameBoard;
   }

@@ -1,5 +1,5 @@
 import shuffle from "shuffle-array";
-
+import { SELECT_NUMBER, endGame } from "./gameBoardActions";
 const NUMBER_OF_BOXES = 10;
 
 const create = () => {
@@ -44,20 +44,23 @@ const selectNumber = (index, gameBoard) => {
     return Object.assign({}, n);
   });
 
-  const isEndGame = (elem, index, array) => elem.selected;
-
-  if (numbers.every(isEndGame)) {
-    endGame();
-  }
-
   return Object.assign({}, gameBoard, {
     lastSelected,
     numbers
   });
 };
 
-const endGame = gameboard => {
-  // Do cool end game stuff
+const endGameCheck = ({ dispatch, getState }) => {
+  return next => action => {
+    const result = next(action);
+    if (action.type === SELECT_NUMBER) {
+      let state = getState();
+      if (state.gameBoard.numbers.every(e => e.selected)) {
+        dispatch(endGame());
+      }
+    }
+    return result;
+  };
 };
 
-export { create, selectNumber };
+export { create, selectNumber, endGameCheck };
