@@ -1,8 +1,8 @@
 import React from "react";
 
-const Number = () =>
-  <button type="button" className="number">
-    1
+const Number = number =>
+  <button type="button" className="number" disabled="{number.selected}">
+    {number.number}
   </button>;
 
 export default Number;
