@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-import GameBoard from "../../gameboard/GameBoard";
+import GameBoard from "../../gameboard/scenes/GameBoard";
 
 import "./Home.scss";
 

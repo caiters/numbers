@@ -1,7 +1,7 @@
 import React from "react";
 
 const Number = () =>
-  <button type="button" class="number">
+  <button type="button" className="number">
     1
   </button>;
 
