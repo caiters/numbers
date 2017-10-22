@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const Number = () => (
-    <button type="button" class="number">{$number}</button>
-)
+const Number = () =>
+  <button type="button" class="number">
+    1
+  </button>;
 
-export default Number
+export default Number;

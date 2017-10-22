@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from "react";
 import { connect } from "react-redux";
-import reactJsLogo from "../../../resources/assets/images/react.svg";
+import GameBoard from "../../../components/GameBoard/GameBoard";
+
 import "./Home.scss";
 
 class Home extends Component {
@@ -15,6 +16,7 @@ class Home extends Component {
         <div className="home__content">
           <h1 className="home__heading">Numbers Clicky</h1>
           <p>How fast can you click 1-10?</p>
+          <GameBoard />
         </div>
       </div>
     );
