@@ -5,7 +5,10 @@ import {
   commonReducer
 } from './modules/common/commonReducer'
 
+import gameBoardReducer from './modules/gameboard/gameBoardReducer'
+
 const rootReducer = combineReducers({
+  gameBoard: gameBoardReducer,
   common: commonReducer,
 })
 
