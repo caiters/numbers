@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import Number from "./Number";
 import { connect } from "react-redux";
-import { selectNumber } from "../gameBoardActions";
+import { selectNumber, startTimer } from "../gameBoardActions";
 
 const mapStateToProps = state => state.gameBoard;
 const mapDispatchToProps = {
@@ -31,8 +31,8 @@ class GameBoard extends Component {
         />
       );
     });
-    return (
-      <section className="gameboard" data-encoded={encoded}>
+      return (
+          <section className="gameboard" data-encoded={encoded}>
         {rows}
       </section>
     );

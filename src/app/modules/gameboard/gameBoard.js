@@ -20,6 +20,11 @@ const create = () => {
   };
 };
 
+const startTimer = (gameBoard) => {
+    const Timer = timer(0)(timerComponent);
+    return Timer;
+};
+
 const selectNumber = (index, gameBoard) => {
   let lastSelected = gameBoard.lastSelected;
 
