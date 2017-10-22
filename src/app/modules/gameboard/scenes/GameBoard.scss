@@ -1,8 +1,10 @@
 /* Button Component */
 
 .gameboard {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 1 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 25rem;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

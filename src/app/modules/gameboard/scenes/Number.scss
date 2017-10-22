@@ -1,9 +1,23 @@
 /* Button Component */
 
-.number{
-    display: block;
-    border: 2px solid #e2e2e2;
-    background-color: #ffffff;
-    font-size: 18px;
-    line-height: 1;
+.number {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  border: 2px solid #e2e2e2;
+  background-color: #ffffff;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 200;
+  cursor: pointer;
+  flex-basis: 20%;
+  transition: all 0.25s;
+  color: #000;
+  &:hover {
+    background: #ddd;
+  }
+  &[disabled],
+  &:disabled {
+    color: currentColor;
+    background-color: #fff;
+  }
 }
