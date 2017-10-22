@@ -4,6 +4,7 @@ import Number from "./Number";
 import { connect } from "react-redux";
 import "./GameBoard.scss";
 import LastClicked from "./LastClicked";
+import NewGame from "./NewGame";
 
 import { selectNumber } from "../gameBoardActions";;
 
@@ -40,10 +41,10 @@ class GameBoard extends Component {
     });
     return (
       <div>
-        <LastClicked />
         <section className="gameboard" data-encoded={encoded}>
           {rows}
         </section>
+        <LastClicked />
       </div>
     );
   }

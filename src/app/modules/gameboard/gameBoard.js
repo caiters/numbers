@@ -20,15 +20,13 @@ const create = () => {
   };
 };
 
-const startTimer = (gameBoard) => {
-    const Timer = timer(0)(timerComponent);
-    return Timer;
+const startTimer = gameBoard => {
+  const Timer = timer(0)(timerComponent);
+  return Timer;
 };
 
 const initNada = () => {
-  return {
-
-  };
+  return {};
 };
 
 const selectNumber = (index, gameBoard) => {
@@ -47,6 +45,7 @@ const selectNumber = (index, gameBoard) => {
   });
 
   const isEndGame = (elem, index, array) => elem.selected;
+
   if (numbers.every(isEndGame)) {
     endGame();
   }
@@ -57,8 +56,8 @@ const selectNumber = (index, gameBoard) => {
   });
 };
 
-const endGame = (gameboard) => {
-   // Do cool end game stuff
+const endGame = gameboard => {
+  // Do cool end game stuff
 };
 
 export { create, selectNumber };
