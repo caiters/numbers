@@ -9,5 +9,4 @@ const selectNumber = index => ({
   type: SELECT_NUMBER,
   index
 });
-
-export default { NEW_GAME, SELECT_NUMBER, newGame, selectNumber };
+export { NEW_GAME, SELECT_NUMBER, newGame, selectNumber };

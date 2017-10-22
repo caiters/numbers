@@ -15,7 +15,7 @@ const create = () => {
 
   return {
     encoded,
-    lastSelected: undefined,
+    lastSelected: 0,
     numbers
   };
 };
@@ -32,7 +32,6 @@ const selectNumber = (index, gameBoard) => {
         selected: true
       };
     }
-
     return Object.assign({}, n);
   });
 
