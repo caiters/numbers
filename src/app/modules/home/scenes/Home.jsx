@@ -13,13 +13,6 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="home__content">
-          <a href="#" className="home__logo-link">
-            <img
-              className="home__logo-img"
-              src={reactJsLogo}
-              alt="React Logo"
-            />
-          </a>
           <h1 className="home__heading">Numbers Clicky</h1>
         </div>
       </div>
