@@ -6,7 +6,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const HOST = process.env.HOST || 'localhost'
-const PORT = process.env.PORT || '9001'
+const PORT = process.env.PORT || '9000'
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 // const apiConfig = require(`./config/${process.env.NODE_ENV}`)
