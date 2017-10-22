@@ -6,15 +6,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Source Sans Pro", sans-serif;
-  &__logo {
-    &-link {
-      display: inline-block;
-      margin: 20px 0;
-    }
-    &-img {
-      width: 150px;
-    }
-  }
+  font-weight: 300;
   &__content {
     text-align: center;
   }
@@ -23,25 +15,5 @@
     font-size: 48px;
     font-weight: 200;
     margin-bottom: 0.5em;
-  }
-  &__nav {
-    margin: 20px 0;
-    &-list {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      &-item {
-        margin: 5px 15px;
-      }
-      &-link {
-        font-size: 16px;
-        color: #525252;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-          color: #53c1de;
-        }
-      }
-    }
   }
 }
